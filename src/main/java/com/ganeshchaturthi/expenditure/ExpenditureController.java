@@ -17,9 +17,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 
 
+
+@CrossOrigin(origins = "https://vinakayaexpenditure.web.app/")
 @RestController
-@CrossOrigin("http://localhost:3000")
-@CrossOrigin("https://vinakayaexpenditure.web.app/")
 @RequestMapping("/expenditure/v1.0/apis")
 public class ExpenditureController {
     @Autowired
