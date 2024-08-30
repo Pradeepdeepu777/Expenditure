@@ -1,10 +1,8 @@
-# Use an official Maven image to build the project
-FROM maven:3.9.3-eclipse-temurin-18 AS build
+FROM maven:3.8.5-openjdk-17 AS build
 COPY . .
 RUN mvn clean package -DskipTests
 
-FROM eclipse-temurin:18-jdk-alpine
-COPY --from=build /app/target/expenditure-0.0.1-SNAPSHOT.jar /app/expenditure.jar
-
+FROM openjdk:17.0.1-jdk-slim
+COPY --from=build /target/demo-0.0.1-SNAPSHOT.jar demo.jar
 EXPOSE 8088
-ENTRYPOINT ["java", "-jar", "expenditure.jar"]
+ENTRYPOINT ["java","-jar","demo.jar"]
