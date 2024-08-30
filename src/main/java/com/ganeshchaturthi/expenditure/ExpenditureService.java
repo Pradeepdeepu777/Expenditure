@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
 @Service
-@CrossOrigin("http://localhost:3000")
+@CrossOrigin("https://vinakayaexpenditure.web.app/")
 public class ExpenditureService {
 
     @Autowired
