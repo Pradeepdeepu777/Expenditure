@@ -5,4 +5,4 @@ RUN mvn clean package -DskipTests
 FROM openjdk:17.0.1-jdk-slim
 COPY --from=build /target/expenditure-0.0.1-SNAPSHOT.jar expenditure.jar
 EXPOSE 8088
-ENTRYPOINT ["java","-jar","demo.jar"]
+ENTRYPOINT ["java","-jar","expenditure.jar"]
