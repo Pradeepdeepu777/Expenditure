@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 
 
-@CrossOrigin(origins = "https://frontend-n5mt.onrender.com/")
+@CrossOrigin(origins = "https://vinakayaexpenditure.web.app/")
 @RestController
 @RequestMapping("/expenditure/v1.0/apis")
 public class ExpenditureController {
